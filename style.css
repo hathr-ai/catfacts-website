@@ -1,0 +1,90 @@
+/* Reset some default browser styles */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* You can use Google Fonts for this */
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Subtle gradient */
+    color: #212529; /* Dark grey text for better contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Heading Style */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+/* Paragraph Style */
+p {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Button Style */
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px);
+}
+
+/* Add bubble effects */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 123, 255, 0.2); /* Soft blue */
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none; /* Don't block clicks */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-200px) scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-400px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Color transition for subtle changes */
+body {
+    animation: colorChange 10s infinite alternate ease-in-out;
+}
+
+@keyframes colorChange {
+    0% {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    }
+    100% {
+        background: linear-gradient(135deg, #e9ecef, #dee2e6);
+    }
+}
